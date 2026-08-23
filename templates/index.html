@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Instagram AI Dashboard</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main class="container"><section class="hero"><h1>Instagram AI</h1><p>داشبورد تحلیل اکانت اینستاگرام با اتصال رسمی Meta Graph API</p><a class="button" href="{{ url_for('dashboard') }}">ورود به داشبورد</a></section>{% with messages=get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}<section class="guide"><h2>تنظیم اولیه</h2><ol><li>اکانت Instagram را به حالت Professional تبدیل کنید.</li><li>در Meta Developers یک App بسازید و مجوزهای لازم را دریافت کنید.</li><li>مقادیر Access Token و Instagram Account ID را در فایل <code>.env</code> وارد کنید.</li></ol></section></main></body></html>
